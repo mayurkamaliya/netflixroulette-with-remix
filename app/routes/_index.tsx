@@ -1,4 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
+import App from "../App";
+import axios from 'axios';
+
+import type { LoaderFunction } from '@remix-run/node';
 
 export const meta: MetaFunction = () => {
   return [
@@ -7,35 +11,40 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export let loader: LoaderFunction = async ({ request }) => {
+  const queryParams = new URL(request.url).searchParams;
+  const query = queryParams.get('query');
+  const sortBy = queryParams.get('sortBy');
+  const offset = queryParams.get('offset');
+  const genre = queryParams.get('genre');
+
+  try {
+    const queryParamsForAPI = {
+      search: query,
+      searchBy: query ? 'title' : 'genres',
+      offset: offset,
+      limit: 10,
+      sortBy: sortBy,
+      sortOrder: 'desc',
+      filter: query ? null : (genre === 'All' ? null : genre),
+    };
+
+    const response = await axios.get('http://localhost:4000/movies', { params: queryParamsForAPI });
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return {
+      movies: [],
+      totalAmount: 0,
+    };
+  }
+};
+
+
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+    <div>
+      <App />;
     </div>
   );
 }

@@ -1,0 +1,41 @@
+img {
+    height: 26rem;
+    max-width: 280px
+}
+
+.movie-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-poster img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-info {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.movie-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.movie-info p {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.movie-info .description {
+    font-style: italic;
+}
