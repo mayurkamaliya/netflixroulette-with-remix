@@ -1,0 +1,32 @@
+/* searchform.css */
+.form-container {
+  text-align: left;
+  margin: 10px;
+  padding-left: 200px;
+}
+
+.header-element {
+  color: azure;
+  font-size: 20px;
+}
+
+
+.form-input {
+  padding: 10px;
+  font-size: 17px;
+  width: 600px;
+  border-radius: 50px;
+  background-color: rgb(16, 17, 18);
+    color: rgb(240, 255, 248);
+    font-weight: 2;
+}
+
+.form-button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 50px;
+  background-color: rgb(202, 146, 140);
+  text-emphasis-color: inherit;
+  cursor: pointer;
+}

@@ -1,0 +1,28 @@
+.genre-container {
+    text-align: left;
+    margin: 20px;
+    padding-left: 200px;
+  }
+  
+.genre-button.white {
+    margin: 5px;
+    padding: 10px;
+    font-size: 23px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-variant-caps: all-petite-caps;
+  }
+
+.genre-button.red {
+    margin: 5px;
+    padding: 10px;
+    font-size: 23px;
+    color: rgb(201, 47, 47);
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-variant-caps: all-petite-caps;
+  }
+  

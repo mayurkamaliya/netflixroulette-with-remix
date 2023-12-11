@@ -1,0 +1,46 @@
+.movielist {
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 18.5rem);
+}
+
+.movielist h2 {
+    margin: auto;
+}
+
+.moviecard {
+    width: min-content;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+}
+
+.pagination-button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s;
+        margin-bottom: 20px;
+}
+
+.pagination-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.page-numbers {
+    margin: 0 10px;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}

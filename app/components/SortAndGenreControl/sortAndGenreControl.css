@@ -1,0 +1,13 @@
+.sort-and-genre-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: aliceblue;
+    margin-right: 50px;
+}
+
+.sort-and-genre-container .sortControl {
+    margin-left: auto;
+    margin-right: 50px;
+}

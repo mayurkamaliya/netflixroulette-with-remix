@@ -1,0 +1,15 @@
+.movie-container {
+    text-align: right;
+    margin-right: 100px;
+    height: 10px;
+}
+
+.add-movie-button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 50px;
+    background-color: rgb(202, 146, 140);
+    text-emphasis-color: inherit;
+    cursor: pointer;
+}
